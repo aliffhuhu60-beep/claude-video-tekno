@@ -102,10 +102,10 @@ t_pop = p2o(T_POP)
 mm = int(T_POP // 60); ss = int(T_POP % 60)
 ov("popup", t_pop, 6.8, (NAMA, PERANAN, f"Mengajar minit {mm:02d}:{ss:02d} · Fasa: Set Induksi"), [(64, 650), (-64, 650)])
 # ---------------------------------------------------------------- panel ayat (video set induksi)
-ov("ayat", p2o(44.0), 14.0, {"items": [("AYAT AKTIF", G, "Ali menanam pokok."), ("AYAT PASIF", S, "Pokok ditanam oleh Ali.")],
-                              "second_at": 51.0 - 44.0, "width": 560}, [(-60, 120), (60, 120), (-60, 330)])
+ov("ayat", p2o(46.4), 13.0, {"items": [("AYAT AKTIF", G, "Ali menanam pokok."), ("AYAT PASIF", S, "Pokok ditanam oleh Ali.")],
+                              "second_at": 54.6 - 46.4, "width": 560}, [(-60, 120), (60, 120), (-60, 330)])
 # ---------------------------------------------------------------- titik utama: ciri
-ov("key", p2o(340.5), 13.0, ("TITIK UTAMA · CIRI AYAT", [
+ov("key", p2o(343.5), 13.0, ("TITIK UTAMA · CIRI AYAT", [
     ("AYAT AKTIF", G, ["Subjek ialah PELAKU (yang membuat).", "Pelaku + kata kerja meN- + penerima. Tiada perkataan \"oleh\"."]),
     ("AYAT PASIF", S, ["Subjek ialah PENERIMA (yang dibuat).", "Penerima + kata kerja di- + oleh + pelaku."])]), RIGHTZ)
 ov("steps", p2o(376.0), 12.0, ["OBJEKTIF PdP",

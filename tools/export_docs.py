@@ -44,6 +44,18 @@ notes = f"""# Nota Keputusan Suntingan — {VER}
 **Guru:** MOHAMAD ALIFF BIN AHMAD SHAHABUDDIN · Opsyen Bahasa Melayu, IPG Kampus Tun Hussein Onn
 **Tempoh:** 30:00 tepat · 1920×1080 · 30 fps · H.264 + AAC 48 kHz stereo · −14 LUFS
 
+## Perubahan v2 (ikut maklum balas)
+- Pop-up guru: tiada lagi "Guru Pelatih"; dipaparkan pada awal Set Induksi (shot guru pertama selepas salam).
+- Salam pembukaan dimasukkan (guru masuk, murid berdiri memberi salam, guru membalas).
+- Scene jurukamera dibuang: setiap selang orang berdiri di dalam kelas disemak secara manual dan 41 selang jurukamera
+  dikenal pasti; shot pada saat itu dipotong rapat pada guru atau diganti dengan B-roll (suara guru diteruskan).
+- B-roll gameplay dipadankan dengan kandungan yang diterangkan (Jenis 1 → soalan blok warna, Jenis 2 → peti & bingkai,
+  Jenis 3 → parkour, Bahagian B → stesen/Cabaran/keputusan).
+- Teks panel disalin daripada teks sebenar dalam permainan Minecraft Education.
+- Sari kata ditranskripsi semula (Whisper large-v3, dua versi audio + turbo) dan disemak baris demi baris; hanya
+  perkataan yang disokong sekurang-kurangnya dua transkripsi dikekalkan, masa diambil daripada cap masa perkataan.
+- Fail penuh 1080p dihantar dalam beberapa bahagian (stream copy, tanpa mampatan semula).
+
 ## Struktur
 | Bahagian | Tempoh |
 |---|---|
@@ -58,8 +70,8 @@ Peralihan: potongan terus; *cross-dissolve* 0.3 s hanya antara fasa.
 - Aktiviti / reaksi murid / B-roll gameplay: **{100 * murid / tot:.0f}%**
 - Wide kelas: **{100 * k['wide'] / tot:.0f}%**
 
-Shot guru lebih rendah sedikit daripada sasaran 70% kerana saat yang ada orang berdiri betul-betul di depan lensa
-(jurukamera telefon, murid lalu) dikesan secara automatik dan diganti dengan B-roll; suara guru diteruskan.
+Shot guru lebih rendah sedikit daripada sasaran 70% kerana saat jurukamera / orang berdiri di depan lensa
+dibuang dan diganti dengan B-roll; suara guru diteruskan.
 
 ## Sumber & penyelarasan
 - `video pdp.mp4` — kamera utama (audio utama untuk semua ucapan).
@@ -91,8 +103,8 @@ pada saat tiada ucapan. Kenyaringan akhir −14 LUFS, true peak ≤ −1 dBTP.
 ## Perkara untuk disemak
 - RPH menyebut Tema *Alam Sekitar* / Tajuk *Hotel Hijau*, tetapi papan putih dalam rakaman menulis Tema *Teknologi dan
   Inovasi* / Tajuk *Ekspedisi Ayat* — intro hanya memaparkan SP 5.3.3.
-- Ayat murid "Minecraft dimainkan oleh saya" tidak dipaparkan dalam panel (bercanggah dengan peraturan pelaku *saya*
-  dalam bahan pelajaran sendiri).
+- Ayat murid "Minecraft dimainkan oleh saya" dikekalkan dalam sari kata (seperti dituturkan) tetapi tidak dijadikan
+  panel (bercanggah dengan peraturan pelaku *saya* dalam bahan pelajaran sendiri).
 - Sila sahkan kebenaran penerbitan wajah murid/rakan.
 - Fail asal di Google Drive tidak diubah atau dipadam.
 """
