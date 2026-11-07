@@ -73,18 +73,36 @@ def teacher_crop(t0, t1, zoom_pref):
     top = sorted(b[2] for b in near)[len(near) // 2]
     hh = sorted(b[4] - b[2] for b in near)[len(near) // 2]
     spread = cx[-1] - cx[0]
-    for z in ([zoom_pref, 1.45, 1.2] if zoom_pref > 1.45 else [zoom_pref, 1.2]):
+    zs = [zoom_pref] if zoom_pref >= 2.0 else ([zoom_pref, 1.45, 1.2] if zoom_pref > 1.45 else [zoom_pref, 1.2])
+    ok = False
+    for z in zs:
         w, h = 1280 / z, 720 / z
         if spread < 0.45 * w:
-            break
+            ok = True; break
+    if zoom_pref >= 2.0 and not ok:
+        return None
     c = cx[len(cx) // 2]
     x0 = min(max(c - w / 2, 0), 1280 - w)
     y0 = min(max(top - 0.16 * h, 0), 720 - h)
     return [round(x0), round(y0), round(w), round(h)]
 
 # ------------------------------------------------------------------ penghalang kamera (orang dekat lensa)
+CAMMAN = json.load(open(W + "cameraman.json"))
 def occluded(t0, t1, crop):
     x0, y0, w, h = crop if crop else (0, 0, 1280, 720)
+    for a, b in CAMMAN:
+        if t0 < b + 1.0 and t1 > a - 1.0:
+            if crop is None:
+                return True
+            for k in KP:
+                if k < max(t0, a - 1.0) or k > min(t1, b + 1.0): continue
+                def is_teacher(x1, y1, x2, y2):
+                    return abs((x1 + x2) / 2 - (x0 + w / 2)) < 0.22 * w
+                for x1, y1, x2, y2, c in det_pdp[k]:
+                    hh, ww = y2 - y1, x2 - x1
+                    if c > 0.45 and hh > 200 and hh / max(ww, 1) > 1.7 and y2 > 470 and y1 < 260 and not is_teacher(x1, y1, x2, y2):
+                        if max(0, min(x2, x0 + w) - max(x1, x0)) > 0.05 * w:
+                            return True
     for k in KP:
         if k < t0 - 0.5 or k > t1 + 0.5: continue
         for x1, y1, x2, y2, c in det_pdp[k]:
@@ -94,7 +112,7 @@ def occluded(t0, t1, crop):
                     return True
     return False
 
-PHASE_POOL = {"LANGKAH 1": (30, 1500), "LANGKAH 2": (1560, 2400)}
+PHASE_POOL = {}
 
 # ------------------------------------------------------------------ kesan kepala (untuk letak grafik)
 def heads(src, t0, t1, crop):
@@ -140,7 +158,20 @@ def gp_clean(a, b):
             return False
     return True
 
+GPC = {"JOIN": [(0, 40)], "LOBI_A": [(40, 245)], "J1": [(245, 455)], "J2": [(455, 600), (630, 1110)],
+       "J3": [(1110, 1395)], "MAJLIS": [(1395, 1560)], "B_MULA": [(1560, 1680)], "B_STESEN": [(1680, 1800)],
+       "B_JALAN": [(1800, 1900)], "CABARAN": [(1900, 1980)], "KEPUTUSAN": [(2040, 2160)]}
+def pool_of(*names):
+    out = []
+    for n_ in names: out += GPC[n_]
+    return out
 def take_gameplay(pool, dur, prefer=None):
+    if pool and isinstance(pool[0], (list, tuple)):
+        for rg in pool:
+            g = take_gameplay(tuple(rg), dur, prefer)
+            if g is not None:
+                return g
+        return None
     lo, hi = pool
     starts = list(range(int(lo), int(hi - dur)))
     if prefer is not None:
@@ -177,35 +208,36 @@ def sok_unsynced_free(dur, pdp_used):
 # ("G", fasa, pdp_mula, pdp_tamat, opsyen)  G = guru (suara asal)
 # ("M", fasa, dur, opsyen)                  M = montaj (muzik, suara disenyapkan)
 SEG = [
-    ("G", "SET INDUKSI", 20.5, 30.0, {}),
+    ("G", "SET INDUKSI", 0.0, 30.0, {"popup_at": 21.0, "fixed": [("A", 0.0, 4.0, "wide"), ("A", 4.0, 8.0, [188, 120, 731, 411]),
+                                                               ("A", 8.0, 16.5, "wide"), ("A", 16.5, 20.5, [188, 120, 731, 411])]}),
     ("G", "SET INDUKSI", 30.0, 72.5, {"fixed": [("A", 30.0, 36.0, "wide"), ("A", 36.0, 48.0, [180, 20, 760, 428]),
                                                ("S?", 48.0, 53.0, None), ("A", 53.0, 62.0, [180, 20, 760, 428])]}),
-    ("G", "SET INDUKSI", 75.5, 118.0, {"popup_at": 76.5}),
+    ("G", "SET INDUKSI", 75.5, 118.0, {}),
     ("M", "SET INDUKSI", 48.0, {"pdp": (120, 330), "sok": (505, 548), "gp": None, "board": True}),
     ("G", "SET INDUKSI", 320.0, 414.5, {}),
-    ("G", "LANGKAH 1", 436.0, 561.5, {"broll": (0, 30)}),
-    ("M", "LANGKAH 1", 18.0, {"pdp": (562, 628), "gp": (30, 200)}),
-    ("G", "LANGKAH 1", 630.0, 759.0, {"broll": (200, 420)}),
-    ("M", "LANGKAH 1", 36.0, {"pdp": (760, 838), "gp": (240, 700)}),
-    ("G", "LANGKAH 1", 840.0, 960.0, {"broll": (700, 900)}),
-    ("G", "LANGKAH 1", 988.0, 1016.0, {}),
-    ("G", "LANGKAH 1", 1016.0, 1060.0, {"broll": (900, 1100)}),
-    ("M", "LANGKAH 1", 36.0, {"pdp": (1060, 1105), "gp": (700, 1150)}),
-    ("G", "LANGKAH 1", 1105.0, 1182.0, {}),
-    ("M", "LANGKAH 1", 36.0, {"pdp": (1182, 1350), "gp": (1100, 1300)}),
-    ("G", "LANGKAH 1", 1354.0, 1410.0, {"broll": (1200, 1300)}),
-    ("M", "LANGKAH 1", 40.0, {"pdp": (1410, 1680), "gp": (1300, 1520)}),
-    ("G", "LANGKAH 1", 1680.0, 1800.0, {}),
-    ("G", "LANGKAH 2", 1946.0, 1966.0, {}),
-    ("G", "LANGKAH 2", 2038.0, 2063.0, {"broll": (1560, 1700)}),
-    ("G", "LANGKAH 2", 2094.0, 2235.0, {"broll": (1690, 1900)}),
-    ("M", "LANGKAH 2", 44.0, {"pdp": (1800, 2030), "gp": (1700, 1910), "force_gp": [(1747.0, 13.5, "AYAT1")]}),
-    ("G", "LANGKAH 2", 2248.0, 2353.0, {}),
-    ("M", "LANGKAH 2", 30.0, {"pdp": (2353, 2420), "gp": (1930, 2100), "force_gp": [(1924.0, 14.0, "AYAT2")]}),
-    ("G", "LANGKAH 2", 2420.0, 2460.0, {}),
-    ("M", "LANGKAH 2", 30.0, {"pdp": (2460, 2608), "gp": (2100, 2400)}),
-    ("G", "LANGKAH 2", 2486.0, 2546.0, {}),
-    ("G", "LANGKAH 2", 2608.0, 2633.0, {}),
+    ("G", "LANGKAH 1", 436.0, 561.5, {"broll": pool_of("JOIN", "LOBI_A")}),
+    ("M", "LANGKAH 1", 18.0, {"pdp": (562, 628), "gp": pool_of("LOBI_A")}),
+    ("G", "LANGKAH 1", 630.0, 759.0, {"broll": pool_of("J1")}),
+    ("M", "LANGKAH 1", 36.0, {"pdp": (760, 838), "gp": pool_of("J1")}),
+    ("G", "LANGKAH 1", 840.0, 960.0, {"broll": pool_of("J2")}),
+    ("G", "LANGKAH 1", 988.0, 1016.0, {"broll": pool_of("J2")}),
+    ("G", "LANGKAH 1", 1016.0, 1060.0, {"broll": pool_of("J2")}),
+    ("M", "LANGKAH 1", 36.0, {"pdp": (1060, 1105), "gp": pool_of("J2")}),
+    ("G", "LANGKAH 1", 1105.0, 1182.0, {"broll": pool_of("J2")}),
+    ("M", "LANGKAH 1", 36.0, {"pdp": (1182, 1350), "gp": pool_of("J3")}),
+    ("G", "LANGKAH 1", 1354.0, 1410.0, {"broll": pool_of("J3")}),
+    ("M", "LANGKAH 1", 40.0, {"pdp": (1410, 1680), "gp": pool_of("J3", "MAJLIS")}),
+    ("G", "LANGKAH 1", 1680.0, 1800.0, {"broll": pool_of("MAJLIS")}),
+    ("G", "LANGKAH 2", 1946.0, 1966.0, {"broll": pool_of("B_MULA")}),
+    ("G", "LANGKAH 2", 2038.0, 2063.0, {"broll": pool_of("B_MULA", "B_STESEN")}),
+    ("G", "LANGKAH 2", 2094.0, 2235.0, {"broll": pool_of("B_STESEN", "B_JALAN")}),
+    ("M", "LANGKAH 2", 44.0, {"pdp": (1800, 2030), "gp": pool_of("B_STESEN", "B_JALAN"), "force_gp": [(1747.0, 13.5, "AYAT1")]}),
+    ("G", "LANGKAH 2", 2248.0, 2353.0, {"broll": pool_of("B_JALAN", "CABARAN")}),
+    ("M", "LANGKAH 2", 30.0, {"pdp": (2353, 2420), "gp": pool_of("CABARAN"), "force_gp": [(1924.0, 14.0, "AYAT2")]}),
+    ("G", "LANGKAH 2", 2420.0, 2460.0, {"broll": pool_of("CABARAN")}),
+    ("M", "LANGKAH 2", 30.0, {"pdp": (2460, 2608), "gp": pool_of("KEPUTUSAN")}),
+    ("G", "LANGKAH 2", 2486.0, 2546.0, {"broll": pool_of("KEPUTUSAN")}),
+    ("G", "LANGKAH 2", 2608.0, 2633.0, {"broll": pool_of("KEPUTUSAN")}),
     ("G", "PENUTUP (REFLEKSI)", 2730.0, 2857.5, {}),
 ]
 
@@ -239,15 +271,24 @@ def guru_segment(phase, a, b, opt):
         # shot guru
         L = random.uniform(9.0, 13.5)
         if opt.get("popup_at") and n == 0:
-            L = 12.0
+            L = max(10.0, opt["popup_at"] + 8.0 - t)
         end = cut_near(t + L, t + 6.0, min(t + 15.0, b))
         if b - end < 4.0:
             end = b
         z = 1.75 if n % 2 == 0 else 1.45
         crop = teacher_crop(t, end, z)
+        if crop is None:
+            for zz in (1.45, 1.75, 2.0, 2.4):
+                c3 = teacher_crop(t, end, zz)
+                if c3:
+                    crop = c3; break
         if crop and occluded(t, end, crop):
-            crop2 = teacher_crop(t, end, 2.0)
-            crop = crop2 if crop2 and not occluded(t, end, crop2) else None
+            crop2 = None
+            for zz in (2.0, 2.4, 2.8):
+                c3 = teacher_crop(t, end, zz)
+                if c3 and not occluded(t, end, c3):
+                    crop2 = c3; break
+            crop = crop2
             if crop is None:
                 pool = opt.get("broll") or PHASE_POOL.get(phase)
                 g = take_gameplay(pool, end - t) if pool else None
@@ -257,7 +298,8 @@ def guru_segment(phase, a, b, opt):
                 elif g is not None:
                     add("G", g, g + end - t, None, phase, "broll", "A", (t, end))
                 else:
-                    add("A", t, end, None, phase, "guru-wide", "A", (t, end))
+                    tight = teacher_crop(t, end, 2.4) or teacher_crop(t, end, 2.0) or [373, 124, 533, 300]
+                    add("A", t, end, tight, phase, "guru", "A", (t, end))
                 t = end; n += 1
                 continue
         if crop:

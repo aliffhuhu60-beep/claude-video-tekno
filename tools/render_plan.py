@@ -11,7 +11,7 @@ W = "/home/user/work/"
 TL = json.load(open(W + "timeline.json"))
 SH = TL["shots"]
 NAMA = "MOHAMAD ALIFF BIN AHMAD SHAHABUDDIN"
-PERANAN = "Guru Pelatih · Opsyen Bahasa Melayu"
+PERANAN = "Opsyen Bahasa Melayu · IPG Kampus Tun Hussein Onn"
 
 def p2o(p):
     for x in SH:
@@ -97,8 +97,9 @@ ov("phase", phase_start("LANGKAH 1"), 4.0, ("LANGKAH 1", "Misi Penyelamat Ayat: 
 ov("phase", phase_start("LANGKAH 2"), 4.0, ("LANGKAH 2", "Ekspedisi Ayat Aktif & Pasif: bina ayat di stesen"), TOPZ)
 ov("phase", phase_start("PENUTUP (REFLEKSI)"), 4.0, ("PENUTUP (REFLEKSI)", "Refleksi & murid membina ayat sendiri"), TOPZ)
 # ---------------------------------------------------------------- pop-up guru (close-up pertama)
-t_pop = p2o(76.5)
-mm = int(76.5 // 60); ss = int(76.5 % 60)
+T_POP = 21.0
+t_pop = p2o(T_POP)
+mm = int(T_POP // 60); ss = int(T_POP % 60)
 ov("popup", t_pop, 6.8, (NAMA, PERANAN, f"Mengajar minit {mm:02d}:{ss:02d} · Fasa: Set Induksi"), [(64, 650), (-64, 650)])
 # ---------------------------------------------------------------- panel ayat (video set induksi)
 ov("ayat", p2o(44.0), 14.0, {"items": [("AYAT AKTIF", G, "Ali menanam pokok."), ("AYAT PASIF", S, "Pokok ditanam oleh Ali.")],
@@ -114,16 +115,17 @@ ov("steps", p2o(376.0), 12.0, ["OBJEKTIF PdP",
 ov("steps", p2o(510.5), 11.0, ["BAHAGIAN A · MISI PENYELAMAT AYAT", "Ayat Tanpa Subjek", "Ayat Tidak Lengkap", "Bahasa Rojak"], RIGHTZ)
 ov("key", p2o(685.5), 12.0, ("JENIS 1 · AYAT TANPA SUBJEK", [
     ("KESALAHAN", G, ["Ayat dimulakan dengan kata seperti Kepada, Bagi, Dalam, Di, Daripada, Untuk."]),
-    ("CARA MENJAWAB", S, ["Baca soalan, pijak blok warna jawapan: Oren = A, Biru muda = B, Magenta = C."])]), RIGHTZ)
+    ("JAWAB SEKARANG!", S, ["Pijak blok warna jawapan anda."]),
+    ("MARKAH", G, ["BETUL! +100   ·   SALAH! −50"])]), RIGHTZ)
 ov("steps", p2o(862.5), 12.0, ["JENIS 2 · AYAT TIDAK LENGKAP",
-    "Buka PETI 1 dan ambil satu kepingan (subjek)", "Buka PETI 2 dan ambil satu kepingan (predikat)",
+    "Ambil kepingan dari PETI 1 (subjek)", "Ambil kepingan dari PETI 2 (predikat)",
     "Letak dalam BINGKAI 1 dan BINGKAI 2"], RIGHTZ)
 ov("steps", p2o(1367.0), 11.0, ["JENIS 3 · BAHASA ROJAK", "Baca soalan dan pilihan jawapan",
-    "Lompat (Space) melalui batu ke platform jawapan A, B atau C"], RIGHTZ)
+    "PARKOUR! Lompat ke platform yang betul"], RIGHTZ)
 # ---------------------------------------------------------------- langkah 2
-ov("steps", p2o(2040.0), 12.0, ["CARA MENJAWAB DI STESEN", "Perhatikan situasi: siapa membuat apa?",
-    "Pilih podium: biru = aktif, tembaga = pasif", "Taip ayat lengkap, kemudian hantar",
-    "Baca keputusan: betul +100, salah −50"], RIGHTZ)
+ov("steps", p2o(2040.0), 13.0, ["STESEN 1 · LADANG PERTANIAN", "PERHATIKAN situasi di stesen ini",
+    "Siapakah PELAKU?", "Apakah PERBUATANNYA?", "Apakah PENERIMA perbuatan itu?",
+    "Taip ayat AKTIF dan ayat PASIF"], RIGHTZ)
 a1 = tag_shot("AYAT1")
 ov("ayat", a1["out_start"] + 6.0 if a1 else None, 7.0, {"items": [("AYAT AKTIF · JAWAPAN MURID", G, "Pak Tani sedang menanam padi")],
                                                           "width": 560}, [(60, 64), (-60, 64)])
