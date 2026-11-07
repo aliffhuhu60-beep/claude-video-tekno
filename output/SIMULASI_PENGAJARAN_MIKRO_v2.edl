@@ -1,0 +1,904 @@
+TITLE: SIMULASI_PENGAJARAN_MIKRO_v2
+FCM: NON-DROP FRAME
+
+001  INTRO    V     C        00:00:00:00 00:00:08:00 00:00:00:00 00:00:08:00
+* FROM CLIP NAME: intro_v1.mp4
+
+002  PDP      V     C        00:00:00:00 00:00:04:00 00:00:08:00 00:00:12:00
+* FROM CLIP NAME: video pdp.mp4
+* SET INDUKSI | wide | AUDIO PDP 00:00:00:00-00:00:04:00
+
+003  PDP      V     C        00:00:04:00 00:00:08:00 00:00:12:00 00:00:16:00
+* FROM CLIP NAME: video pdp.mp4
+* SET INDUKSI | guru | AUDIO PDP 00:00:04:00-00:00:08:00 CROP [188, 120, 731, 411]
+
+004  PDP      V     C        00:00:08:00 00:00:16:15 00:00:16:00 00:00:24:15
+* FROM CLIP NAME: video pdp.mp4
+* SET INDUKSI | wide | AUDIO PDP 00:00:08:00-00:00:16:15
+
+005  PDP      V     C        00:00:16:15 00:00:20:15 00:00:24:15 00:00:28:15
+* FROM CLIP NAME: video pdp.mp4
+* SET INDUKSI | guru | AUDIO PDP 00:00:16:15-00:00:20:15 CROP [188, 120, 731, 411]
+
+006  PDP      V     C        00:00:20:15 00:00:30:00 00:00:28:15 00:00:38:00
+* FROM CLIP NAME: video pdp.mp4
+* SET INDUKSI | guru | AUDIO PDP 00:00:20:15-00:00:30:00 CROP [183, 119, 731, 411]
+
+007  PDP      V     C        00:00:30:00 00:00:37:00 00:00:38:00 00:00:45:00
+* FROM CLIP NAME: video pdp.mp4
+* SET INDUKSI | wide | AUDIO PDP 00:00:30:00-00:00:37:00
+
+008  PDP      V     C        00:00:37:00 00:00:49:15 00:00:45:00 00:00:57:15
+* FROM CLIP NAME: video pdp.mp4
+* SET INDUKSI | guru | AUDIO PDP 00:00:37:00-00:00:49:15 CROP [180, 20, 760, 428]
+
+009  PDP      V     C        00:00:49:15 00:00:54:00 00:00:57:15 00:01:02:00
+* FROM CLIP NAME: video pdp.mp4
+* SET INDUKSI | wide | AUDIO PDP 00:00:49:15-00:00:54:00
+
+010  PDP      V     C        00:00:54:00 00:01:04:00 00:01:02:00 00:01:12:00
+* FROM CLIP NAME: video pdp.mp4
+* SET INDUKSI | guru | AUDIO PDP 00:00:54:00-00:01:04:00 CROP [180, 20, 760, 428]
+
+011  PDP      V     C        00:01:04:00 00:01:12:15 00:01:12:00 00:01:20:15
+* FROM CLIP NAME: video pdp.mp4
+* SET INDUKSI | guru | AUDIO PDP 00:01:04:00-00:01:12:15 CROP [98, 118, 731, 411]
+
+012  PDP      V     C        00:01:15:15 00:01:25:22 00:01:20:15 00:01:30:22
+* FROM CLIP NAME: video pdp.mp4
+* SET INDUKSI | guru | AUDIO PDP 00:01:15:15-00:01:25:22 CROP [195, 121, 731, 411]
+
+013  PDP      V     C        00:01:25:22 00:01:36:13 00:01:30:22 00:01:41:13
+* FROM CLIP NAME: video pdp.mp4
+* SET INDUKSI | guru | AUDIO PDP 00:01:25:22-00:01:36:13 CROP [124, 105, 883, 497]
+
+014  PDP      V     C        00:01:36:13 00:01:40:16 00:01:41:13 00:01:45:16
+* FROM CLIP NAME: video pdp.mp4
+* SET INDUKSI | wide | AUDIO PDP 00:01:36:13-00:01:40:16
+
+015  PDP      V     C        00:01:40:16 00:01:53:09 00:01:45:16 00:01:58:09
+* FROM CLIP NAME: video pdp.mp4
+* SET INDUKSI | guru | AUDIO PDP 00:01:40:16-00:01:53:09 CROP [404, 119, 731, 411]
+
+016  PDP      V     C        00:01:53:09 00:01:58:00 00:01:58:09 00:02:03:00
+* FROM CLIP NAME: video pdp.mp4
+* SET INDUKSI | wide | AUDIO PDP 00:01:53:09-00:01:58:00
+
+017  SOKONGAN V     C        00:08:25:00 00:08:28:07 00:02:03:00 00:02:06:07
+* FROM CLIP NAME: video sokongan.mp4
+* SET INDUKSI | montaj | AUDIO MUZIK (suara disenyap)
+
+018  PDP      V     C        00:02:00:00 00:02:04:00 00:02:06:07 00:02:10:07
+* FROM CLIP NAME: video pdp.mp4
+* SET INDUKSI | montaj | AUDIO MUZIK (suara disenyap)
+
+019  PDP      V     C        00:02:21:26 00:02:24:28 00:02:10:07 00:02:13:09
+* FROM CLIP NAME: video pdp.mp4
+* SET INDUKSI | montaj | AUDIO MUZIK (suara disenyap)
+
+020  SOKONGAN V     C        00:08:31:09 00:08:34:26 00:02:13:09 00:02:16:25
+* FROM CLIP NAME: video sokongan.mp4
+* SET INDUKSI | montaj | AUDIO MUZIK (suara disenyap)
+
+021  PDP      V     C        00:03:05:22 00:03:09:22 00:02:16:25 00:02:20:25
+* FROM CLIP NAME: video pdp.mp4
+* SET INDUKSI | montaj | AUDIO MUZIK (suara disenyap)
+
+022  PDP      V     C        00:03:33:19 00:03:36:21 00:02:20:25 00:02:23:27
+* FROM CLIP NAME: video pdp.mp4
+* SET INDUKSI | montaj | AUDIO MUZIK (suara disenyap) CROP [560, 60, 640, 360]
+
+023  SOKONGAN V     C        00:08:37:09 00:08:40:24 00:02:23:27 00:02:27:12
+* FROM CLIP NAME: video sokongan.mp4
+* SET INDUKSI | montaj | AUDIO MUZIK (suara disenyap)
+
+024  PDP      V     C        00:04:05:15 00:04:09:15 00:02:27:12 00:02:31:12
+* FROM CLIP NAME: video pdp.mp4
+* SET INDUKSI | montaj | AUDIO MUZIK (suara disenyap)
+
+025  PDP      V     C        00:04:36:11 00:04:40:11 00:02:31:12 00:02:35:12
+* FROM CLIP NAME: video pdp.mp4
+* SET INDUKSI | montaj | AUDIO MUZIK (suara disenyap)
+
+026  SOKONGAN V     C        00:08:42:09 00:08:45:26 00:02:35:12 00:02:38:29
+* FROM CLIP NAME: video sokongan.mp4
+* SET INDUKSI | montaj | AUDIO MUZIK (suara disenyap)
+
+027  PDP      V     C        00:04:58:08 00:05:00:09 00:02:38:29 00:02:41:00
+* FROM CLIP NAME: video pdp.mp4
+* SET INDUKSI | montaj | AUDIO MUZIK (suara disenyap)
+
+028  PDP      V     C        00:05:20:00 00:05:32:16 00:02:41:00 00:02:53:16
+* FROM CLIP NAME: video pdp.mp4
+* SET INDUKSI | guru | AUDIO PDP 00:05:20:00-00:05:32:16 CROP [410, 123, 731, 411]
+
+029  PDP      V     C        00:05:32:16 00:05:41:17 00:02:53:16 00:03:02:17
+* FROM CLIP NAME: video pdp.mp4
+* SET INDUKSI | guru | AUDIO PDP 00:05:32:16-00:05:41:17 CROP [335, 107, 883, 497]
+
+030  PDP      V     C        00:05:41:17 00:05:45:23 00:03:02:17 00:03:06:24
+* FROM CLIP NAME: video pdp.mp4
+* SET INDUKSI | wide | AUDIO PDP 00:05:41:17-00:05:45:23
+
+031  PDP      V     C        00:05:45:23 00:05:57:28 00:03:06:24 00:03:18:28
+* FROM CLIP NAME: video pdp.mp4
+* SET INDUKSI | guru | AUDIO PDP 00:05:45:23-00:05:57:28 CROP [436, 122, 731, 411]
+
+032  PDP      V     C        00:05:57:28 00:06:08:14 00:03:18:28 00:03:29:14
+* FROM CLIP NAME: video pdp.mp4
+* SET INDUKSI | guru-wide | AUDIO PDP 00:05:57:28-00:06:08:14 CROP [107, 40, 1067, 600]
+
+033  PDP      V     C        00:06:08:14 00:06:11:20 00:03:29:14 00:03:32:21
+* FROM CLIP NAME: video pdp.mp4
+* SET INDUKSI | wide | AUDIO PDP 00:06:08:14-00:06:11:20
+
+034  PDP      V     C        00:06:11:20 00:06:26:06 00:03:32:21 00:03:47:06
+* FROM CLIP NAME: video pdp.mp4
+* SET INDUKSI | guru | AUDIO PDP 00:06:11:20-00:06:26:06 CROP [0, 120, 731, 411]
+
+035  PDP      V     C        00:06:26:06 00:06:34:27 00:03:47:06 00:03:55:27
+* FROM CLIP NAME: video pdp.mp4
+* SET INDUKSI | guru | AUDIO PDP 00:06:26:06-00:06:34:27 CROP [0, 108, 883, 497]
+
+036  PDP      V     C        00:06:34:27 00:06:40:04 00:03:55:27 00:04:01:04
+* FROM CLIP NAME: video pdp.mp4
+* SET INDUKSI | wide | AUDIO PDP 00:06:34:27-00:06:40:04
+
+037  PDP      V     C        00:06:40:04 00:06:49:17 00:04:01:04 00:04:10:18
+* FROM CLIP NAME: video pdp.mp4
+* SET INDUKSI | guru | AUDIO PDP 00:06:40:04-00:06:49:17 CROP [273, 137, 533, 300]
+
+038  PDP      V     C        00:06:49:17 00:06:54:15 00:04:10:18 00:04:15:15
+* FROM CLIP NAME: video pdp.mp4
+* SET INDUKSI | guru | AUDIO PDP 00:06:49:17-00:06:54:15 CROP [96, 106, 883, 497]
+
+039  PDP      V     D    009 00:07:16:00 00:07:27:22 00:04:15:06 00:04:26:28
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | guru | AUDIO PDP 00:07:16:00-00:07:27:22 CROP [236, 128, 640, 360]
+
+040  PDP      V     C        00:07:27:22 00:07:40:10 00:04:26:28 00:04:39:17
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | guru | AUDIO PDP 00:07:27:22-00:07:40:10 CROP [121, 131, 883, 497]
+
+041  GAMEPLAY V     C        00:00:32:00 00:00:36:03 00:04:39:17 00:04:43:20
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 1 | broll | AUDIO PDP 00:07:40:10-00:07:44:13
+
+042  PDP      V     C        00:07:44:13 00:07:55:25 00:04:43:20 00:04:55:02
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | guru | AUDIO PDP 00:07:44:13-00:07:55:25 CROP [114, 119, 731, 411]
+
+043  PDP      V     C        00:07:55:25 00:08:05:13 00:04:55:02 00:05:04:20
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | guru | AUDIO PDP 00:07:55:25-00:08:05:13 CROP [250, 105, 883, 497]
+
+044  GAMEPLAY V     C        00:00:24:00 00:00:27:21 00:05:04:20 00:05:08:10
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 1 | broll | AUDIO PDP 00:08:05:13-00:08:09:04
+
+045  PDP      V     C        00:08:09:04 00:08:22:00 00:05:08:10 00:05:21:06
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | guru | AUDIO PDP 00:08:09:04-00:08:22:00 CROP [201, 128, 731, 411]
+
+046  PDP      V     C        00:08:22:00 00:08:29:27 00:05:21:06 00:05:29:03
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | guru | AUDIO PDP 00:08:22:00-00:08:29:27 CROP [65, 120, 883, 497]
+
+047  GAMEPLAY V     C        00:02:00:00 00:02:03:28 00:05:29:03 00:05:33:01
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 1 | broll | AUDIO PDP 00:08:29:27-00:08:33:25
+
+048  PDP      V     C        00:08:33:25 00:08:44:10 00:05:33:01 00:05:43:16
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | guru | AUDIO PDP 00:08:33:25-00:08:44:10 CROP [121, 119, 731, 411]
+
+049  PDP      V     C        00:08:44:10 00:08:55:16 00:05:43:16 00:05:54:22
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | guru | AUDIO PDP 00:08:44:10-00:08:55:16 CROP [39, 106, 883, 497]
+
+050  PDP      V     C        00:08:55:16 00:09:00:13 00:05:54:22 00:05:59:20
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | wide | AUDIO PDP 00:08:55:16-00:09:00:13
+
+051  PDP      V     C        00:09:00:13 00:09:09:27 00:05:59:20 00:06:09:04
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | guru | AUDIO PDP 00:09:00:13-00:09:09:27 CROP [118, 118, 731, 411]
+
+052  GAMEPLAY V     C        00:01:15:00 00:01:20:13 00:06:09:04 00:06:14:16
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 1 | broll | AUDIO PDP 00:09:09:27-00:09:15:10
+
+053  PDP      V     C        00:09:15:10 00:09:21:15 00:06:14:16 00:06:20:21
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | guru | AUDIO PDP 00:09:15:10-00:09:21:15 CROP [20, 108, 883, 497]
+
+054  SOKONGAN V     C        00:06:20:09 00:06:25:05 00:06:20:21 00:06:25:17
+* FROM CLIP NAME: video sokongan.mp4
+* LANGKAH 1 | montaj | AUDIO MUZIK (suara disenyap)
+
+055  GAMEPLAY V     C        00:02:14:00 00:02:19:04 00:06:25:17 00:06:30:21
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 1 | montaj | AUDIO MUZIK (suara disenyap)
+
+056  PDP      V     C        00:09:22:00 00:09:26:00 00:06:30:21 00:06:34:21
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | montaj | AUDIO MUZIK (suara disenyap)
+
+057  SOKONGAN V     C        00:08:50:09 00:08:52:10 00:06:34:21 00:06:36:22
+* FROM CLIP NAME: video sokongan.mp4
+* LANGKAH 1 | montaj | AUDIO MUZIK (suara disenyap)
+
+058  PDP      V     C        00:10:30:00 00:10:40:28 00:06:36:22 00:06:47:20
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | guru | AUDIO PDP 00:10:30:00-00:10:40:28 CROP [178, 159, 731, 411]
+
+059  PDP      V     C        00:10:40:28 00:10:53:04 00:06:47:20 00:06:59:26
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | guru | AUDIO PDP 00:10:40:28-00:10:53:04 CROP [118, 107, 883, 497]
+
+060  GAMEPLAY V     C        00:07:21:00 00:07:24:20 00:06:59:26 00:07:03:16
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 1 | broll | AUDIO PDP 00:10:53:04-00:10:56:24
+
+061  PDP      V     C        00:10:56:24 00:11:07:10 00:07:03:16 00:07:14:02
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | guru | AUDIO PDP 00:10:56:24-00:11:07:10 CROP [165, 117, 731, 411]
+
+062  PDP      V     C        00:11:07:10 00:11:16:26 00:07:14:02 00:07:23:18
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | guru | AUDIO PDP 00:11:07:10-00:11:16:26 CROP [113, 143, 883, 497]
+
+063  GAMEPLAY V     C        00:07:08:00 00:07:12:05 00:07:23:18 00:07:27:22
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 1 | broll | AUDIO PDP 00:11:16:26-00:11:21:01
+
+064  GAMEPLAY V     C        00:06:49:00 00:07:02:03 00:07:27:22 00:07:40:26
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 1 | broll | AUDIO PDP 00:11:21:01-00:11:34:04
+
+065  PDP      V     C        00:11:34:04 00:11:45:10 00:07:40:26 00:07:52:02
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | guru | AUDIO PDP 00:11:34:04-00:11:45:10 CROP [601, 103, 457, 257]
+
+066  GAMEPLAY V     C        00:06:22:00 00:06:27:20 00:07:52:02 00:07:57:22
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 1 | broll | AUDIO PDP 00:11:45:10-00:11:51:00
+
+067  PDP      V     C        00:11:51:00 00:12:03:22 00:07:57:22 00:08:10:14
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | guru | AUDIO PDP 00:11:51:00-00:12:03:22 CROP [320, 0, 640, 360]
+
+068  GAMEPLAY V     C        00:04:18:00 00:04:29:27 00:08:10:14 00:08:22:10
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 1 | broll | AUDIO PDP 00:12:03:22-00:12:15:19
+
+069  PDP      V     C        00:12:15:19 00:12:18:22 00:08:22:10 00:08:25:14
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | guru | AUDIO PDP 00:12:15:19-00:12:18:22 CROP [311, 111, 731, 411]
+
+070  GAMEPLAY V     C        00:05:21:00 00:05:31:18 00:08:25:14 00:08:36:01
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 1 | broll | AUDIO PDP 00:12:18:22-00:12:29:10
+
+071  PDP      V     C        00:12:29:10 00:12:39:00 00:08:36:01 00:08:45:22
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | guru | AUDIO PDP 00:12:29:10-00:12:39:00 CROP [154, 96, 883, 497]
+
+072  SOKONGAN V     C        00:07:51:24 00:07:57:05 00:08:45:22 00:08:51:02
+* FROM CLIP NAME: video sokongan.mp4
+* LANGKAH 1 | montaj | AUDIO MUZIK (suara disenyap)
+
+073  GAMEPLAY V     C        00:04:45:00 00:04:50:04 00:08:51:02 00:08:56:07
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 1 | montaj | AUDIO MUZIK (suara disenyap)
+
+074  PDP      V     C        00:12:48:00 00:12:51:04 00:08:56:07 00:08:59:10
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | montaj | AUDIO MUZIK (suara disenyap)
+
+075  SOKONGAN V     C        00:09:15:09 00:09:19:10 00:08:59:10 00:09:03:11
+* FROM CLIP NAME: video sokongan.mp4
+* LANGKAH 1 | montaj | AUDIO MUZIK (suara disenyap)
+
+076  PDP      V     C        00:12:59:25 00:13:03:25 00:09:03:11 00:09:07:11
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | montaj | AUDIO MUZIK (suara disenyap)
+
+077  PDP      V     C        00:13:20:20 00:13:24:20 00:09:07:11 00:09:11:11
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | montaj | AUDIO MUZIK (suara disenyap) CROP [200, 300, 760, 428]
+
+078  SOKONGAN V     C        00:03:41:09 00:03:46:07 00:09:11:11 00:09:16:09
+* FROM CLIP NAME: video sokongan.mp4
+* LANGKAH 1 | montaj | AUDIO MUZIK (suara disenyap)
+
+079  GAMEPLAY V     C        00:09:08:00 00:09:18:02 00:09:16:09 00:09:26:12
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 1 | broll | AUDIO PDP 00:14:00:00-00:14:10:02
+
+080  PDP      V     C        00:14:10:02 00:14:21:17 00:09:26:12 00:09:37:27
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | guru | AUDIO PDP 00:14:10:02-00:14:21:17 CROP [72, 105, 883, 497]
+
+081  GAMEPLAY V     C        00:07:48:00 00:07:51:16 00:09:37:27 00:09:41:13
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 1 | broll | AUDIO PDP 00:14:21:17-00:14:25:04
+
+082  PDP      V     C        00:14:25:04 00:14:38:02 00:09:41:13 00:09:54:12
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | guru | AUDIO PDP 00:14:25:04-00:14:38:02 CROP [168, 119, 731, 411]
+
+083  PDP      V     C        00:14:38:02 00:14:50:20 00:09:54:12 00:10:06:29
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | guru | AUDIO PDP 00:14:38:02-00:14:50:20 CROP [0, 99, 883, 497]
+
+084  PDP      V     C        00:14:50:20 00:14:54:02 00:10:06:29 00:10:10:12
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | wide | AUDIO PDP 00:14:50:20-00:14:54:02
+
+085  PDP      V     C        00:14:54:02 00:15:05:16 00:10:10:12 00:10:21:25
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | guru | AUDIO PDP 00:14:54:02-00:15:05:16 CROP [66, 106, 731, 411]
+
+086  PDP      V     C        00:15:05:16 00:15:17:23 00:10:21:25 00:10:34:03
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | guru | AUDIO PDP 00:15:05:16-00:15:17:23 CROP [111, 94, 883, 497]
+
+087  GAMEPLAY V     C        00:08:03:00 00:08:07:20 00:10:34:03 00:10:38:23
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 1 | broll | AUDIO PDP 00:15:17:23-00:15:22:14
+
+088  PDP      V     C        00:15:22:14 00:15:34:05 00:10:38:23 00:10:50:14
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | guru | AUDIO PDP 00:15:22:14-00:15:34:05 CROP [213, 105, 731, 411]
+
+089  GAMEPLAY V     C        00:09:40:00 00:09:52:04 00:10:50:14 00:11:02:18
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 1 | broll | AUDIO PDP 00:15:34:05-00:15:46:09
+
+090  GAMEPLAY V     C        00:08:40:00 00:08:53:21 00:11:02:18 00:11:16:09
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 1 | broll | AUDIO PDP 00:15:46:09-00:16:00:00
+
+091  PDP      V     C        00:16:28:00 00:16:39:17 00:11:16:09 00:11:27:27
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | guru | AUDIO PDP 00:16:28:00-00:16:39:17 CROP [273, 108, 731, 411]
+
+092  GAMEPLAY V     C        00:17:17:00 00:17:27:06 00:11:27:27 00:11:38:03
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 1 | broll | AUDIO PDP 00:16:39:17-00:16:49:24
+
+093  GAMEPLAY V     C        00:08:23:00 00:08:29:06 00:11:38:03 00:11:44:09
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 1 | broll | AUDIO PDP 00:16:49:24-00:16:56:00
+
+094  PDP      V     C        00:16:56:00 00:17:08:16 00:11:44:09 00:11:56:26
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | guru | AUDIO PDP 00:16:56:00-00:17:08:16 CROP [319, 111, 731, 411]
+
+095  GAMEPLAY V     C        00:14:55:00 00:15:07:07 00:11:56:26 00:12:09:03
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 1 | broll | AUDIO PDP 00:17:08:16-00:17:20:23
+
+096  PDP      V     C        00:17:20:23 00:17:33:26 00:12:09:03 00:12:22:06
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | guru | AUDIO PDP 00:17:20:23-00:17:33:26 CROP [335, 195, 457, 257]
+
+097  GAMEPLAY V     C        00:08:10:00 00:08:16:04 00:12:22:06 00:12:28:09
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 1 | broll | AUDIO PDP 00:17:33:26-00:17:40:00
+
+098  SOKONGAN V     C        00:05:35:24 00:05:40:01 00:12:28:09 00:12:32:16
+* FROM CLIP NAME: video sokongan.mp4
+* LANGKAH 1 | montaj | AUDIO MUZIK (suara disenyap)
+
+099  GAMEPLAY V     C        00:07:36:00 00:07:41:04 00:12:32:16 00:12:37:20
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 1 | montaj | AUDIO MUZIK (suara disenyap)
+
+100  PDP      V     C        00:17:40:00 00:17:45:00 00:12:37:20 00:12:42:20
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | montaj | AUDIO MUZIK (suara disenyap)
+
+101  SOKONGAN V     C        00:01:08:24 00:01:12:26 00:12:42:20 00:12:46:21
+* FROM CLIP NAME: video sokongan.mp4
+* LANGKAH 1 | montaj | AUDIO MUZIK (suara disenyap)
+
+102  GAMEPLAY V     C        00:09:31:00 00:09:35:04 00:12:46:21 00:12:50:25
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 1 | montaj | AUDIO MUZIK (suara disenyap)
+
+103  PDP      V     C        00:17:46:08 00:17:50:09 00:12:50:25 00:12:54:27
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | montaj | AUDIO MUZIK (suara disenyap) CROP [200, 300, 760, 428]
+
+104  SOKONGAN V     C        00:05:47:24 00:05:53:03 00:12:54:27 00:13:00:06
+* FROM CLIP NAME: video sokongan.mp4
+* LANGKAH 1 | montaj | AUDIO MUZIK (suara disenyap)
+
+105  GAMEPLAY V     C        00:09:23:00 00:09:27:03 00:13:00:06 00:13:04:09
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 1 | montaj | AUDIO MUZIK (suara disenyap)
+
+106  PDP      V     C        00:18:25:00 00:18:37:08 00:13:04:09 00:13:16:17
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | guru | AUDIO PDP 00:18:25:00-00:18:37:08 CROP [0, 106, 731, 411]
+
+107  GAMEPLAY V     C        00:18:08:00 00:18:19:06 00:13:16:17 00:13:27:23
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 1 | broll | AUDIO PDP 00:18:37:08-00:18:48:14
+
+108  GAMEPLAY V     C        00:16:24:00 00:16:34:24 00:13:27:23 00:13:38:16
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 1 | broll | AUDIO PDP 00:18:48:14-00:18:59:08
+
+109  PDP      V     C        00:18:59:08 00:19:11:20 00:13:38:16 00:13:50:29
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | guru | AUDIO PDP 00:18:59:08-00:19:11:20 CROP [376, 141, 640, 360]
+
+110  GAMEPLAY V     C        00:08:59:00 00:09:02:22 00:13:50:29 00:13:54:21
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 1 | broll | AUDIO PDP 00:19:11:20-00:19:15:12
+
+111  PDP      V     C        00:19:15:12 00:19:25:28 00:13:54:21 00:14:05:07
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | guru-wide | AUDIO PDP 00:19:15:12-00:19:25:28 CROP [107, 40, 1067, 600]
+
+112  PDP      V     C        00:19:25:28 00:19:36:00 00:14:05:07 00:14:15:09
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | guru | AUDIO PDP 00:19:25:28-00:19:36:00 CROP [204, 93, 883, 497]
+
+113  PDP      V     C        00:19:36:00 00:19:42:00 00:14:15:09 00:14:21:09
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | wide | AUDIO PDP 00:19:36:00-00:19:42:00
+
+114  SOKONGAN V     C        00:04:38:24 00:04:44:19 00:14:21:09 00:14:27:04
+* FROM CLIP NAME: video sokongan.mp4
+* LANGKAH 1 | montaj | AUDIO MUZIK (suara disenyap)
+
+115  GAMEPLAY V     C        00:20:58:00 00:21:03:15 00:14:27:04 00:14:32:19
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 1 | montaj | AUDIO MUZIK (suara disenyap)
+
+116  PDP      V     C        00:19:50:00 00:19:54:10 00:14:32:19 00:14:36:29
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | montaj | AUDIO MUZIK (suara disenyap)
+
+117  SOKONGAN V     C        00:01:43:24 00:01:49:16 00:14:36:29 00:14:42:21
+* FROM CLIP NAME: video sokongan.mp4
+* LANGKAH 1 | montaj | AUDIO MUZIK (suara disenyap)
+
+118  GAMEPLAY V     C        00:20:48:00 00:20:52:25 00:14:42:21 00:14:47:16
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 1 | montaj | AUDIO MUZIK (suara disenyap)
+
+119  PDP      V     C        00:20:13:10 00:20:18:01 00:14:47:16 00:14:52:07
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | montaj | AUDIO MUZIK (suara disenyap) CROP [200, 300, 760, 428]
+
+120  SOKONGAN V     C        00:02:02:09 00:02:07:05 00:14:52:07 00:14:57:03
+* FROM CLIP NAME: video sokongan.mp4
+* LANGKAH 1 | montaj | AUDIO MUZIK (suara disenyap)
+
+121  PDP      V     C        00:22:34:00 00:22:44:12 00:14:57:03 00:15:07:15
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | guru | AUDIO PDP 00:22:34:00-00:22:44:12 CROP [327, 117, 731, 411]
+
+122  PDP      V     C        00:22:44:12 00:22:55:07 00:15:07:15 00:15:18:10
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | guru | AUDIO PDP 00:22:44:12-00:22:55:07 CROP [131, 131, 883, 497]
+
+123  GAMEPLAY V     C        00:18:50:00 00:18:54:20 00:15:18:10 00:15:23:00
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 1 | broll | AUDIO PDP 00:22:55:07-00:22:59:27
+
+124  PDP      V     C        00:22:59:27 00:23:11:01 00:15:23:00 00:15:34:04
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | guru | AUDIO PDP 00:22:59:27-00:23:11:01 CROP [102, 118, 731, 411]
+
+125  GAMEPLAY V     C        00:20:11:00 00:20:20:20 00:15:34:04 00:15:43:23
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 1 | broll | AUDIO PDP 00:23:11:01-00:23:20:20
+
+126  PDP      V     C        00:23:20:20 00:23:24:26 00:15:43:23 00:15:47:28
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | guru | AUDIO PDP 00:23:20:20-00:23:24:26 CROP [366, 88, 731, 411]
+
+127  PDP      V     C        00:23:24:26 00:23:30:00 00:15:47:28 00:15:53:03
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | guru | AUDIO PDP 00:23:24:26-00:23:30:00 CROP [72, 112, 731, 411]
+
+128  SOKONGAN V     C        00:00:17:24 00:00:23:01 00:15:53:03 00:15:58:10
+* FROM CLIP NAME: video sokongan.mp4
+* LANGKAH 1 | montaj | AUDIO MUZIK (suara disenyap)
+
+129  GAMEPLAY V     C        00:19:49:00 00:19:53:01 00:15:58:10 00:16:02:10
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 1 | montaj | AUDIO MUZIK (suara disenyap)
+
+130  PDP      V     C        00:23:42:00 00:23:46:07 00:16:02:10 00:16:06:17
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | montaj | AUDIO MUZIK (suara disenyap)
+
+131  SOKONGAN V     C        00:00:53:09 00:00:58:08 00:16:06:17 00:16:11:16
+* FROM CLIP NAME: video sokongan.mp4
+* LANGKAH 1 | montaj | AUDIO MUZIK (suara disenyap)
+
+132  GAMEPLAY V     C        00:18:43:00 00:18:47:22 00:16:11:16 00:16:16:08
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 1 | montaj | AUDIO MUZIK (suara disenyap)
+
+133  PDP      V     C        00:24:41:22 00:24:46:22 00:16:16:08 00:16:21:08
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | montaj | AUDIO MUZIK (suara disenyap) CROP [200, 300, 760, 428]
+
+134  SOKONGAN V     C        00:07:23:24 00:07:29:29 00:16:21:08 00:16:27:13
+* FROM CLIP NAME: video sokongan.mp4
+* LANGKAH 1 | montaj | AUDIO MUZIK (suara disenyap)
+
+135  GAMEPLAY V     C        00:22:27:00 00:22:32:20 00:16:27:13 00:16:33:03
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 1 | montaj | AUDIO MUZIK (suara disenyap)
+
+136  PDP      V     C        00:28:00:00 00:28:08:27 00:16:33:03 00:16:42:00
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | guru | AUDIO PDP 00:28:00:00-00:28:08:27 CROP [147, 120, 731, 411]
+
+137  GAMEPLAY V     C        00:23:57:00 00:24:09:01 00:16:42:00 00:16:54:01
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 1 | broll | AUDIO PDP 00:28:08:27-00:28:20:28
+
+138  PDP      V     C        00:28:20:28 00:28:33:22 00:16:54:01 00:17:06:25
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | guru | AUDIO PDP 00:28:20:28-00:28:33:22 CROP [320, 0, 640, 360]
+
+139  GAMEPLAY V     C        00:24:20:00 00:24:30:17 00:17:06:25 00:17:17:13
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 1 | broll | AUDIO PDP 00:28:33:22-00:28:44:09
+
+140  PDP      V     C        00:28:44:09 00:28:53:28 00:17:17:13 00:17:27:02
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | guru | AUDIO PDP 00:28:44:09-00:28:53:28 CROP [201, 128, 731, 411]
+
+141  PDP      V     C        00:28:53:28 00:29:03:14 00:17:27:02 00:17:36:18
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | guru | AUDIO PDP 00:28:53:28-00:29:03:14 CROP [102, 108, 883, 497]
+
+142  GAMEPLAY V     C        00:25:39:00 00:25:42:02 00:17:36:18 00:17:39:20
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 1 | broll | AUDIO PDP 00:29:03:14-00:29:06:16
+
+143  PDP      V     C        00:29:06:16 00:29:17:16 00:17:39:20 00:17:50:19
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | guru | AUDIO PDP 00:29:06:16-00:29:17:16 CROP [167, 121, 731, 411]
+
+144  PDP      V     C        00:29:17:16 00:29:30:18 00:17:50:19 00:18:03:21
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | guru | AUDIO PDP 00:29:17:16-00:29:30:18 CROP [116, 151, 883, 497]
+
+145  PDP      V     C        00:29:30:18 00:29:34:10 00:18:03:21 00:18:07:13
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | wide | AUDIO PDP 00:29:30:18-00:29:34:10
+
+146  PDP      V     C        00:29:34:10 00:29:44:00 00:18:07:13 00:18:17:03
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | guru | AUDIO PDP 00:29:34:10-00:29:44:00 CROP [163, 122, 731, 411]
+
+147  PDP      V     C        00:29:44:00 00:29:53:17 00:18:17:03 00:18:26:20
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 1 | guru | AUDIO PDP 00:29:44:00-00:29:53:17 CROP [58, 105, 883, 497]
+
+148  GAMEPLAY V     C        00:24:35:00 00:24:41:13 00:18:26:20 00:18:33:03
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 1 | broll | AUDIO PDP 00:29:53:17-00:30:00:00
+
+149  PDP      V     D    009 00:32:26:00 00:32:37:03 00:18:32:24 00:18:43:28
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 2 | guru | AUDIO PDP 00:32:26:00-00:32:37:03 CROP [199, 117, 731, 411]
+
+150  GAMEPLAY V     C        00:27:21:00 00:27:25:17 00:18:43:28 00:18:48:14
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 2 | broll | AUDIO PDP 00:32:37:03-00:32:41:20
+
+151  PDP      V     C        00:32:41:20 00:32:46:00 00:18:48:14 00:18:52:24
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 2 | guru | AUDIO PDP 00:32:41:20-00:32:46:00 CROP [118, 147, 883, 497]
+
+152  GAMEPLAY V     C        00:26:57:00 00:27:06:23 00:18:52:24 00:19:02:18
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 2 | broll | AUDIO PDP 00:33:58:00-00:34:07:23
+
+153  PDP      V     C        00:34:07:23 00:34:23:00 00:19:02:18 00:19:17:24
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 2 | guru | AUDIO PDP 00:34:07:23-00:34:23:00 CROP [108, 106, 883, 497]
+
+154  PDP      V     C        00:34:54:00 00:35:06:25 00:19:17:24 00:19:30:19
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 2 | guru | AUDIO PDP 00:34:54:00-00:35:06:25 CROP [191, 153, 731, 411]
+
+155  PDP      V     C        00:35:06:25 00:35:19:13 00:19:30:19 00:19:43:08
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 2 | guru | AUDIO PDP 00:35:06:25-00:35:19:13 CROP [109, 142, 883, 497]
+
+156  GAMEPLAY V     C        00:29:42:00 00:29:47:11 00:19:43:08 00:19:48:19
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 2 | broll | AUDIO PDP 00:35:19:13-00:35:24:25
+
+157  PDP      V     C        00:35:24:25 00:35:36:11 00:19:48:19 00:20:00:05
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 2 | guru | AUDIO PDP 00:35:24:25-00:35:36:11 CROP [183, 118, 731, 411]
+
+158  PDP      V     C        00:35:36:11 00:35:49:13 00:20:00:05 00:20:13:07
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 2 | guru | AUDIO PDP 00:35:36:11-00:35:49:13 CROP [109, 152, 883, 497]
+
+159  PDP      V     C        00:35:49:13 00:35:54:03 00:20:13:07 00:20:17:27
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 2 | wide | AUDIO PDP 00:35:49:13-00:35:54:03
+
+160  PDP      V     C        00:35:54:03 00:36:03:07 00:20:17:27 00:20:27:01
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 2 | guru | AUDIO PDP 00:35:54:03-00:36:03:07 CROP [64, 109, 731, 411]
+
+161  PDP      V     C        00:36:03:07 00:36:15:26 00:20:27:01 00:20:39:20
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 2 | guru | AUDIO PDP 00:36:03:07-00:36:15:26 CROP [0, 98, 883, 497]
+
+162  GAMEPLAY V     C        00:29:31:00 00:29:34:27 00:20:39:20 00:20:43:18
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 2 | broll | AUDIO PDP 00:36:15:26-00:36:19:23
+
+163  PDP      V     C        00:36:19:23 00:36:31:00 00:20:43:18 00:20:54:24
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 2 | guru | AUDIO PDP 00:36:19:23-00:36:31:00 CROP [124, 110, 731, 411]
+
+164  GAMEPLAY V     C        00:28:46:00 00:28:58:12 00:20:54:24 00:21:07:06
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 2 | broll | AUDIO PDP 00:36:31:00-00:36:43:12
+
+165  GAMEPLAY V     C        00:28:05:00 00:28:17:13 00:21:07:06 00:21:19:19
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 2 | broll | AUDIO PDP 00:36:43:12-00:36:55:25
+
+166  GAMEPLAY V     C        00:30:41:00 00:30:53:29 00:21:19:19 00:21:32:18
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 2 | broll | AUDIO PDP 00:36:55:25-00:37:08:23
+
+167  GAMEPLAY V     C        00:29:51:00 00:29:57:07 00:21:32:18 00:21:38:24
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 2 | broll | AUDIO PDP 00:37:08:23-00:37:15:00
+
+168  GAMEPLAY V     C        00:29:07:00 00:29:20:15 00:21:38:24 00:21:52:09
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 2 | montaj | AUDIO MUZIK (suara disenyap)
+
+169  SOKONGAN V     C        00:00:39:09 00:00:43:26 00:21:52:09 00:21:56:27
+* FROM CLIP NAME: video sokongan.mp4
+* LANGKAH 2 | montaj | AUDIO MUZIK (suara disenyap)
+
+170  GAMEPLAY V     C        00:28:23:00 00:28:28:05 00:21:56:27 00:22:02:02
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 2 | montaj | AUDIO MUZIK (suara disenyap)
+
+171  PDP      V     C        00:30:00:00 00:30:05:00 00:22:02:02 00:22:07:02
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 2 | montaj | AUDIO MUZIK (suara disenyap)
+
+172  SOKONGAN V     C        00:06:28:09 00:06:32:24 00:22:07:02 00:22:11:17
+* FROM CLIP NAME: video sokongan.mp4
+* LANGKAH 2 | montaj | AUDIO MUZIK (suara disenyap)
+
+173  GAMEPLAY V     C        00:29:24:00 00:29:28:05 00:22:11:17 00:22:15:22
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 2 | montaj | AUDIO MUZIK (suara disenyap)
+
+174  PDP      V     C        00:30:36:04 00:30:41:04 00:22:15:22 00:22:20:22
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 2 | montaj | AUDIO MUZIK (suara disenyap) CROP [200, 300, 760, 428]
+
+175  SOKONGAN V     C        00:02:56:24 00:02:58:27 00:22:20:22 00:22:22:24
+* FROM CLIP NAME: video sokongan.mp4
+* LANGKAH 2 | montaj | AUDIO MUZIK (suara disenyap)
+
+176  GAMEPLAY V     C        00:31:12:00 00:31:21:12 00:22:22:24 00:22:32:06
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 2 | broll | AUDIO PDP 00:37:28:00-00:37:37:12
+
+177  PDP      V     C        00:37:37:12 00:37:47:09 00:22:32:06 00:22:42:03
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 2 | guru | AUDIO PDP 00:37:37:12-00:37:47:09 CROP [122, 150, 883, 497]
+
+178  GAMEPLAY V     C        00:30:09:00 00:30:12:01 00:22:42:03 00:22:45:04
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 2 | broll | AUDIO PDP 00:37:47:09-00:37:50:09
+
+179  PDP      V     C        00:37:50:09 00:37:59:17 00:22:45:04 00:22:54:12
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 2 | guru-wide | AUDIO PDP 00:37:50:09-00:37:59:17 CROP [107, 40, 1067, 600]
+
+180  PDP      V     C        00:37:59:17 00:38:10:08 00:22:54:12 00:23:05:02
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 2 | guru | AUDIO PDP 00:37:59:17-00:38:10:08 CROP [108, 106, 883, 497]
+
+181  GAMEPLAY V     C        00:31:01:00 00:31:04:13 00:23:05:02 00:23:08:16
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 2 | broll | AUDIO PDP 00:38:10:08-00:38:13:21
+
+182  PDP      V     C        00:38:13:21 00:38:24:03 00:23:08:16 00:23:18:27
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 2 | guru | AUDIO PDP 00:38:13:21-00:38:24:03 CROP [331, 177, 457, 257]
+
+183  PDP      V     C        00:38:24:03 00:38:34:11 00:23:18:27 00:23:29:05
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 2 | guru-wide | AUDIO PDP 00:38:24:03-00:38:34:11 CROP [107, 40, 1067, 600]
+
+184  GAMEPLAY V     C        00:30:35:00 00:30:38:25 00:23:29:05 00:23:33:00
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 2 | broll | AUDIO PDP 00:38:34:11-00:38:38:06
+
+185  PDP      V     C        00:38:38:06 00:38:47:07 00:23:33:00 00:23:42:01
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 2 | guru | AUDIO PDP 00:38:38:06-00:38:47:07 CROP [504, 109, 731, 411]
+
+186  PDP      V     C        00:38:47:07 00:38:57:00 00:23:42:01 00:23:51:24
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 2 | guru | AUDIO PDP 00:38:47:07-00:38:57:00 CROP [112, 151, 883, 497]
+
+187  PDP      V     C        00:38:57:00 00:39:00:22 00:23:51:24 00:23:55:16
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 2 | wide | AUDIO PDP 00:38:57:00-00:39:00:22
+
+188  PDP      V     C        00:39:00:22 00:39:13:00 00:23:55:16 00:24:07:24
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 2 | guru | AUDIO PDP 00:39:00:22-00:39:13:00 CROP [279, 147, 533, 300]
+
+189  GAMEPLAY V     C        00:32:04:00 00:32:18:00 00:24:07:24 00:24:21:24
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 2 | montaj | AUDIO MUZIK (suara disenyap)
+
+190  SOKONGAN V     C        00:08:05:09 00:08:11:07 00:24:21:24 00:24:27:22
+* FROM CLIP NAME: video sokongan.mp4
+* LANGKAH 2 | montaj | AUDIO MUZIK (suara disenyap)
+
+191  GAMEPLAY V     C        00:32:34:00 00:32:39:09 00:24:27:22 00:24:33:02
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 2 | montaj | AUDIO MUZIK (suara disenyap)
+
+192  PDP      V     C        00:39:36:00 00:39:40:22 00:24:33:02 00:24:37:24
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 2 | montaj | AUDIO MUZIK (suara disenyap)
+
+193  PDP      V     C        00:40:20:00 00:40:30:21 00:24:37:24 00:24:48:15
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 2 | guru | AUDIO PDP 00:40:20:00-00:40:30:21 CROP [92, 110, 731, 411]
+
+194  PDP      V     C        00:40:30:21 00:40:39:29 00:24:48:15 00:24:57:23
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 2 | guru | AUDIO PDP 00:40:30:21-00:40:39:29 CROP [72, 94, 883, 497]
+
+195  GAMEPLAY V     C        00:31:51:00 00:31:56:22 00:24:57:23 00:25:03:15
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 2 | broll | AUDIO PDP 00:40:39:29-00:40:45:21
+
+196  GAMEPLAY V     C        00:32:22:00 00:32:31:22 00:25:03:15 00:25:13:06
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 2 | broll | AUDIO PDP 00:40:45:21-00:40:55:12
+
+197  GAMEPLAY V     C        00:32:54:00 00:32:58:18 00:25:13:06 00:25:17:24
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 2 | broll | AUDIO PDP 00:40:55:12-00:41:00:00
+
+198  SOKONGAN V     C        00:02:14:09 00:02:20:09 00:25:17:24 00:25:23:24
+* FROM CLIP NAME: video sokongan.mp4
+* LANGKAH 2 | montaj | AUDIO MUZIK (suara disenyap)
+
+199  GAMEPLAY V     C        00:35:03:00 00:35:08:15 00:25:23:24 00:25:29:09
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 2 | montaj | AUDIO MUZIK (suara disenyap)
+
+200  PDP      V     C        00:41:00:00 00:41:04:27 00:25:29:09 00:25:34:07
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 2 | montaj | AUDIO MUZIK (suara disenyap)
+
+201  SOKONGAN V     C        00:03:48:09 00:03:53:20 00:25:34:07 00:25:39:17
+* FROM CLIP NAME: video sokongan.mp4
+* LANGKAH 2 | montaj | AUDIO MUZIK (suara disenyap)
+
+202  GAMEPLAY V     C        00:34:19:00 00:34:24:15 00:25:39:17 00:25:45:02
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 2 | montaj | AUDIO MUZIK (suara disenyap)
+
+203  PDP      V     C        00:42:26:20 00:42:29:12 00:25:45:02 00:25:47:24
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 2 | montaj | AUDIO MUZIK (suara disenyap) CROP [200, 300, 760, 428]
+
+204  PDP      V     C        00:41:26:00 00:41:38:27 00:25:47:24 00:26:00:21
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 2 | guru | AUDIO PDP 00:41:26:00-00:41:38:27 CROP [190, 166, 731, 411]
+
+205  PDP      V     C        00:41:38:27 00:41:50:11 00:26:00:21 00:26:12:05
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 2 | guru | AUDIO PDP 00:41:38:27-00:41:50:11 CROP [107, 159, 883, 497]
+
+206  GAMEPLAY V     C        00:35:18:00 00:35:21:27 00:26:12:05 00:26:16:02
+* FROM CLIP NAME: video gameplay.mp4
+* LANGKAH 2 | broll | AUDIO PDP 00:41:50:11-00:41:54:08
+
+207  PDP      V     C        00:41:54:08 00:42:07:01 00:26:16:02 00:26:28:25
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 2 | guru | AUDIO PDP 00:41:54:08-00:42:07:01 CROP [81, 129, 533, 300]
+
+208  PDP      V     C        00:42:07:01 00:42:17:17 00:26:28:25 00:26:39:11
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 2 | guru | AUDIO PDP 00:42:07:01-00:42:17:17 CROP [99, 124, 533, 300]
+
+209  PDP      V     C        00:42:17:17 00:42:26:00 00:26:39:11 00:26:47:24
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 2 | guru-wide | AUDIO PDP 00:42:17:17-00:42:26:00 CROP [107, 40, 1067, 600]
+
+210  PDP      V     C        00:43:28:00 00:43:38:22 00:26:47:24 00:26:58:16
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 2 | guru | AUDIO PDP 00:43:28:00-00:43:38:22 CROP [197, 156, 731, 411]
+
+211  PDP      V     C        00:43:38:22 00:43:53:00 00:26:58:16 00:27:12:24
+* FROM CLIP NAME: video pdp.mp4
+* LANGKAH 2 | guru | AUDIO PDP 00:43:38:22-00:43:53:00 CROP [120, 142, 883, 497]
+
+212  PDP      V     D    009 00:45:30:00 00:45:39:18 00:27:12:15 00:27:22:03
+* FROM CLIP NAME: video pdp.mp4
+* PENUTUP (REFLEKSI) | guru-wide | AUDIO PDP 00:45:30:00-00:45:39:18 CROP [107, 40, 1067, 600]
+
+213  PDP      V     C        00:45:39:18 00:45:51:28 00:27:22:03 00:27:34:13
+* FROM CLIP NAME: video pdp.mp4
+* PENUTUP (REFLEKSI) | guru | AUDIO PDP 00:45:39:18-00:45:51:28 CROP [198, 101, 883, 497]
+
+214  PDP      V     C        00:45:51:28 00:45:55:03 00:27:34:13 00:27:37:18
+* FROM CLIP NAME: video pdp.mp4
+* PENUTUP (REFLEKSI) | wide | AUDIO PDP 00:45:51:28-00:45:55:03
+
+215  PDP      V     C        00:45:55:03 00:46:06:22 00:27:37:18 00:27:49:08
+* FROM CLIP NAME: video pdp.mp4
+* PENUTUP (REFLEKSI) | guru | AUDIO PDP 00:45:55:03-00:46:06:22 CROP [282, 107, 731, 411]
+
+216  PDP      V     C        00:46:06:22 00:46:19:26 00:27:49:08 00:28:02:10
+* FROM CLIP NAME: video pdp.mp4
+* PENUTUP (REFLEKSI) | guru | AUDIO PDP 00:46:06:22-00:46:19:26 CROP [164, 93, 883, 497]
+
+217  PDP      V     C        00:46:19:26 00:46:23:25 00:28:02:10 00:28:06:10
+* FROM CLIP NAME: video pdp.mp4
+* PENUTUP (REFLEKSI) | wide | AUDIO PDP 00:46:19:26-00:46:23:25
+
+218  PDP      V     C        00:46:23:25 00:46:33:21 00:28:06:10 00:28:16:06
+* FROM CLIP NAME: video pdp.mp4
+* PENUTUP (REFLEKSI) | guru | AUDIO PDP 00:46:23:25-00:46:33:21 CROP [252, 104, 731, 411]
+
+219  PDP      V     C        00:46:33:21 00:46:45:26 00:28:16:06 00:28:28:11
+* FROM CLIP NAME: video pdp.mp4
+* PENUTUP (REFLEKSI) | guru | AUDIO PDP 00:46:33:21-00:46:45:26 CROP [216, 90, 883, 497]
+
+220  SOKONGAN V     C        00:03:28:22 00:03:31:25 00:28:28:11 00:28:31:14
+* FROM CLIP NAME: video sokongan.mp4
+* PENUTUP (REFLEKSI) | reaksi | AUDIO PDP 00:46:45:26-00:46:48:28
+
+221  PDP      V     C        00:46:48:28 00:46:58:09 00:28:31:14 00:28:40:24
+* FROM CLIP NAME: video pdp.mp4
+* PENUTUP (REFLEKSI) | guru | AUDIO PDP 00:46:48:28-00:46:58:09 CROP [368, 124, 533, 300]
+
+222  PDP      V     C        00:46:58:09 00:47:09:22 00:28:40:24 00:28:52:08
+* FROM CLIP NAME: video pdp.mp4
+* PENUTUP (REFLEKSI) | guru | AUDIO PDP 00:46:58:09-00:47:09:22 CROP [313, 115, 640, 360]
+
+223  PDP      V     C        00:47:09:22 00:47:15:20 00:28:52:08 00:28:58:05
+* FROM CLIP NAME: video pdp.mp4
+* PENUTUP (REFLEKSI) | guru | AUDIO PDP 00:47:09:22-00:47:15:20 CROP [320, 0, 640, 360]
+
+224  PDP      V     C        00:47:15:20 00:47:27:28 00:28:58:05 00:29:10:13
+* FROM CLIP NAME: video pdp.mp4
+* PENUTUP (REFLEKSI) | guru | AUDIO PDP 00:47:15:20-00:47:27:28 CROP [373, 126, 533, 300]
+
+225  PDP      V     C        00:47:27:28 00:47:37:15 00:29:10:13 00:29:20:00
+* FROM CLIP NAME: video pdp.mp4
+* PENUTUP (REFLEKSI) | guru | AUDIO PDP 00:47:27:28-00:47:37:15 CROP [377, 125, 533, 300]
+
+226  OUTRO    V     C        00:00:00:00 00:00:40:00 00:29:20:00 00:30:00:00
+* FROM CLIP NAME: outro_v1.mp4
