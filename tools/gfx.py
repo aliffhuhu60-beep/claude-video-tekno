@@ -204,3 +204,131 @@ def credits_card(bg, blocks):
             y += 52
         y += 18
     return im
+
+
+# ---------------------------------------------------------------- panel titik utama
+def keypoint_panel(title, rows, width=660, n_visible=None):
+    """rows: [(label_chip, warna_chip, [baris teks...])] -> panel tanpa kedudukan (saiz rapat)."""
+    tmp = ImageDraw.Draw(Image.new("RGBA", (10, 10)))
+    body = []
+    for label, chip, lines in rows:
+        wl = []
+        for ln in lines:
+            wl += wrap(tmp, ln, SEMI(27), width - 70)
+        body.append((label, chip, wl))
+    h = 96 + sum(56 + 36 * len(wl) + 18 for _, _, wl in body)
+    im = Image.new("RGBA", (width, h), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    rrect(d, (0, 0, width, h), 22, FOREST + (238,))
+    d.rectangle((0, 22, 8, h - 22), fill=GOLD)
+    d.text((34, 26), title, font=XB(32), fill=GOLD)
+    y = 88
+    n_visible = len(body) if n_visible is None else n_visible
+    for i, (label, chip, wl) in enumerate(body):
+        if i < n_visible:
+            cw = text_w(d, label, BOLD(22)) + 36
+            rrect(d, (34, y, 34 + cw, y + 38), 19, chip)
+            d.text((52, y + 6), label, font=BOLD(22), fill=FOREST if chip == GOLD else WHITE)
+            for j, ln in enumerate(wl):
+                d.text((36, y + 50 + j * 36), ln, font=SEMI(27), fill=WHITE)
+        y += 56 + 36 * len(wl) + 18
+    return im
+
+
+def steps_block(title, steps, n_visible=None, width=640):
+    """Panel langkah bernombor (saiz rapat, tanpa kedudukan)."""
+    tmp = ImageDraw.Draw(Image.new("RGBA", (10, 10)))
+    rows = [wrap(tmp, s, SEMI(28), width - 130) for s in steps]
+    th = wrap(tmp, title, XB(32), width - 60)
+    h = 50 + 42 * len(th) + sum(36 * len(r) + 30 for r in rows) + 10
+    im = Image.new("RGBA", (width, h), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    rrect(d, (0, 0, width, h), 22, FOREST + (238,))
+    d.rectangle((0, 22, 8, h - 22), fill=GOLD)
+    for j, ln in enumerate(th):
+        d.text((34, 26 + j * 42), ln, font=XB(32), fill=GOLD)
+    y = 40 + 42 * len(th) + 6
+    n_visible = len(steps) if n_visible is None else n_visible
+    for i, r in enumerate(rows):
+        if i < n_visible:
+            d.ellipse((34, y, 80, y + 46), fill=GOLD)
+            num = str(i + 1)
+            d.text((57 - text_w(d, num, XB(28)) / 2, y + 6), num, font=XB(28), fill=FOREST)
+            for j, line in enumerate(r):
+                d.text((100, y + 4 + j * 36), line, font=SEMI(28), fill=WHITE)
+        y += 36 * len(r) + 30
+    return im
+
+
+def sentence_block(items, width=820, n_visible=None):
+    """Panel ayat (saiz rapat). items: [(label, chip, teks)] ; kata kerja meN-/di- ditebalkan."""
+    tmp = ImageDraw.Draw(Image.new("RGBA", (10, 10)))
+    def parts(s):
+        out = []
+        for w in s.split():
+            core = w.strip(".,!?").lower()
+            verb_a = core.startswith(("men", "mem", "meng", "meny", "me")) and len(core) > 4 and core not in ("menunjukkan",)
+            verb_p = core.startswith("di") and len(core) > 4
+            if verb_a:
+                out.append((w + " ", "v", GOLD))
+            elif verb_p:
+                out.append((w + " ", "v", SOFT))
+            elif core == "oleh":
+                out.append((w + " ", "v", SOFT))
+            else:
+                out.append((w + " ", "n", WHITE))
+        return out
+    size = 36
+    widths = [sum(text_w(tmp, s, XB(size) if st == "v" else SEMI(size)) for s, st, c in parts(t)) for _, _, t in items]
+    width = int(max(width, max(widths) + 70))
+    h = 30 + 128 * len(items)
+    im = Image.new("RGBA", (width, h), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    rrect(d, (0, 0, width, h), 22, FOREST + (238,))
+    y = 26
+    n_visible = len(items) if n_visible is None else n_visible
+    for i, (label, chip, text) in enumerate(items):
+        if i < n_visible:
+            cw = text_w(d, label, BOLD(22)) + 36
+            rrect(d, (30, y, 30 + cw, y + 38), 19, chip)
+            d.text((48, y + 6), label, font=BOLD(22), fill=FOREST if chip == GOLD else WHITE)
+            draw_rich(d, 32, y + 50, parts(text), size)
+        y += 128
+    return im
+
+
+def phase_block(phase, activity):
+    tmp = ImageDraw.Draw(Image.new("RGBA", (10, 10)))
+    fl, fp, fa = BOLD(22), XB(46), SEMI(26)
+    w = int(max(text_w(tmp, phase, fp), text_w(tmp, activity, fa)) + 76)
+    im = Image.new("RGBA", (w, 168), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    rrect(d, (0, 0, w, 168), 18, FOREST + (238,))
+    d.rectangle((0, 18, 8, 150), fill=GOLD)
+    d.text((36, 20), "FASA PdP", font=fl, fill=GOLD)
+    d.text((34, 50), phase, font=fp, fill=WHITE)
+    d.text((36, 114), activity, font=fa, fill=(215, 235, 210))
+    return im
+
+
+def popup_block(name, role, minute_phase, shine=0.0):
+    tmp = ImageDraw.Draw(Image.new("RGBA", (10, 10)))
+    w = int(max(820, text_w(tmp, name, XB(36)) + 80)); h = 180
+    im = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+    d = ImageDraw.Draw(im)
+    rrect(d, (0, 0, w, h), 20, FOREST + (242,))
+    d.rectangle((0, 20, 10, h - 20), fill=GOLD)
+    d.text((40, 20), "GURU SEDANG MENGAJAR", font=BOLD(24), fill=GOLD)
+    d.text((38, 54), name, font=XB(36), fill=WHITE)
+    d.text((40, 104), role, font=SEMI(26), fill=(220, 235, 225))
+    d.text((40, 140), minute_phase, font=SEMI(23), fill=SOFT)
+    if shine > 0:
+        sh = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+        sd = ImageDraw.Draw(sh)
+        sx = -200 + int((w + 400) * shine)
+        sd.polygon([(sx, 0), (sx + 70, 0), (sx + 10, h), (sx - 60, h)], fill=(255, 255, 255, 70))
+        mask = im.getchannel("A")
+        im2 = Image.alpha_composite(im, sh)
+        im2.putalpha(mask)
+        im = im2
+    return im

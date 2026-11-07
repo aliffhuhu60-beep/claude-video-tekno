@@ -10,7 +10,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 import gfx
 from gfx import W, H, FOREST, GOLD, SOFT, WHITE, SEMI, BOLD, XB, DSEMI
 
-OUT = sys.argv[1]
+OUT = sys.argv[1] if __name__ == "__main__" else "."
 os.makedirs(OUT, exist_ok=True)
 FPS = 30
 SR = 48000
