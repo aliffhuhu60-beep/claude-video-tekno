@@ -1,0 +1,8 @@
+Cara menggabungkan 6 bahagian kembali menjadi satu fail 30:00 (tanpa kehilangan kualiti):
+
+1. Letak keenam-enam fail BMONETHO_FINAL_6bhg_1.mp4 ... 6bhg_6.mp4 dalam satu folder.
+2. Jalankan:
+   printf "file '%s'\n" BMONETHO_FINAL_6bhg_1.mp4 BMONETHO_FINAL_6bhg_2.mp4 BMONETHO_FINAL_6bhg_3.mp4 BMONETHO_FINAL_6bhg_4.mp4 BMONETHO_FINAL_6bhg_5.mp4 BMONETHO_FINAL_6bhg_6.mp4 > senarai.txt
+   ffmpeg -f concat -safe 0 -i senarai.txt -c copy BMONETHO_SIMULASI_PENGAJARAN_MIKRO_FINAL_30_MINIT.mp4
+
+Atau dalam CapCut: import keenam-enam bahagian mengikut urutan ke garis masa yang sama dan eksport.
