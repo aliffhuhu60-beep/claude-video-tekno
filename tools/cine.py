@@ -281,7 +281,7 @@ def name_layer(t):
             nm_img = reveal_text(nm, F_LT_NAME, t, t0 + 0.15, dur=0.7, track0=8, track1=1.5, blur0=3)
             lay.alpha_composite(nm_img, (0, 30))
             lay = light_sweep(lay, t, t0 + 0.9, 0.6, 70, 70)
-            return fade(lay, a_in * a_out), (70 + int(-30 * (1 - a_in)), 560)
+            return fade(lay, a_in * a_out), (70 + int(-30 * (1 - a_in)), 650)
     return None
 
 
